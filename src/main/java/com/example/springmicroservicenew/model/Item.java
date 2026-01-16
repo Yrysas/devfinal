@@ -1,6 +1,6 @@
 package com.example.springmicroservicenew.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
@@ -19,7 +19,6 @@ public class Item {
     @JoinColumn(name = "order_id", nullable = false)
     private Order order;
 
-    // Getters and Setters
 
     public Long getId() {
         return id;

@@ -1,6 +1,6 @@
 package com.example.springmicroservicenew.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Set;
 
 @Entity
@@ -18,7 +18,6 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Order> orders;
 
-    // Getters and Setters
 
     public Long getId() {
         return id;

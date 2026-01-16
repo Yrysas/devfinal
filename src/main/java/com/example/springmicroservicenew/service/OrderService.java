@@ -15,7 +15,6 @@ public class OrderService {
     private OrderRepository orderRepository;
 
     public Order createOrder(Order order) {
-        // Persist the provided Order entity. Relationships should be set by caller or mapped beforehand.
         return orderRepository.save(order);
     }
 
@@ -31,7 +30,6 @@ public class OrderService {
         Order order = orderRepository.findById(id).orElseThrow(() -> new RuntimeException("Order not found"));
         order.setOrderDate(orderDetails.getOrderDate());
         order.setTotalAmount(orderDetails.getTotalAmount());
-        // update other fields as needed
         return orderRepository.save(order);
     }
 

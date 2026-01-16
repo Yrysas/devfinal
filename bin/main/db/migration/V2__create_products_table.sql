@@ -6,5 +6,4 @@ CREATE TABLE products (
     created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT NOW()
 );
 
--- Example seed data
 INSERT INTO products (name, description, price) VALUES ('Sample product', 'A demo product', 19.99);

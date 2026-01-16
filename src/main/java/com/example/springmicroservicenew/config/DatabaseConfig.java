@@ -20,10 +20,8 @@ public class DatabaseConfig {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource);
 
-        // Пакет с сущностями JPA
         em.setPackagesToScan("com.example.springmicroservicenew.model");
 
-        // Устанавливаем Hibernate как JPA провайдер
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
 

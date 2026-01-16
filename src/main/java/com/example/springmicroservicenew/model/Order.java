@@ -1,6 +1,6 @@
 package com.example.springmicroservicenew.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
@@ -26,7 +26,6 @@ public class Order {
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Item> items;
 
-    // Getters and Setters
 
     public Long getId() {
         return id;
